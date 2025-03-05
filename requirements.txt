@@ -1,7 +1,6 @@
 streamlit
-openai-whisper
 pandas
+numpy
+whisper
 ffmpeg-python
-torch
-torchaudio
-torchvision
+openpyxl
