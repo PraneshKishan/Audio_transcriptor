@@ -7,8 +7,16 @@ import ffmpeg
 import time
 
 def extract_audio(video_path, audio_path):
-    """Extracts audio from a video file using ffmpeg."""
-    ffmpeg.input(video_path).output(audio_path, format='wav', acodec='pcm_s16le', ac=1, ar='16000').run(overwrite_output=True)
+    """Extracts audio from a video file using ffmpeg and handles errors silently."""
+    try:
+        (
+            ffmpeg
+            .input(video_path)
+            .output(audio_path, format='wav', acodec='pcm_s16le', ac=1, ar='16000')
+            .run(overwrite_output=True, capture_stdout=True, capture_stderr=True)
+        )
+    except ffmpeg.Error:
+        pass  # Suppress errors to ensure app continues running
 
 def transcribe_audio(audio_path):
     """Transcribes audio using Whisper model."""
