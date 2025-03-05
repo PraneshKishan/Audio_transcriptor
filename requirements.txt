@@ -1,9 +1,12 @@
 streamlit
 pandas
-numpy
+numpy==2.1.0
+openpyxl
 whisper
 ffmpeg-python
-openpyxl
 torch
 torchaudio
 transformers
+numba
+ffmpeg
+sentencepiece
