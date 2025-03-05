@@ -3,10 +3,9 @@ pandas
 numpy==2.1.0
 openpyxl
 whisper
-ffmpeg-python
-torch
+ffmpeg-python  
+torch==2.1.2  
 torchaudio
 transformers
 numba
-ffmpeg
 sentencepiece
