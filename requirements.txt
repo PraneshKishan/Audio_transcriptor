@@ -4,3 +4,6 @@ numpy
 whisper
 ffmpeg-python
 openpyxl
+torch
+torchaudio
+transformers
